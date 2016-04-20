@@ -1,26 +1,10 @@
 puts "Введите a"
-a_string = gets.chomp
-a = a_string.to_f
+a = gets.chomp.to_f
 puts "Введите b"
-b_string = gets.chomp
-b = b_string.to_f
+b = gets.chomp.to_f
 puts "Введите c"
-c_string = gets.chomp
-c = c_string.to_f
-#проверка быстрая без дискриминанта
-if a+b+c ==0 && a !=0
-x1 = 0
-x2 = c/a
-puts "Ответ х1 = #{x1}, х2 = #{x2}."
-return  #наверное так прерывается исполнение
-end
+c = gets.chomp.to_f
 
-if b == a + c && c != 0 
-x1 = -1
-x2 = -a/c	
-puts "Ответ х1 = #{x1}, х2 = #{x2}."	
-return 
-end
 #классическое решение
 d = b**2 - 4 * a * c
 if d > 0 
