@@ -14,7 +14,5 @@ mounts = {
 }
 
 mounts.each do |mount, days|
-	if days == 30 
-  		 puts mount
-	end
+	puts mount if days == 30
 end

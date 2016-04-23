@@ -1,40 +1,29 @@
-mount_hash = {
- 1 => 31,
- 2 => 28,
- 3 => 31,
- 4 => 30,
- 5 => 31,
- 6 => 30,
- 7 => 31,
- 8 => 31,
- 9 => 30,
- 10 => 31,
- 11 => 30,
- 12 => 31,
-}
+
 
 puts "Введите число"
-number = gets.chomp.to_i
+day = gets.chomp.to_i
 
 puts "Введите месяц"
-mount = gets.chomp.to_i
+month = gets.chomp.to_i
 
 puts "Введите год"
 year = gets.chomp.to_i
 
-if year == 2000 || year%4 == 0 
-	mount_hash[2] = 29
+month_day = [31,28,31,30,31,30,31,31,30,31,30,31]
+
+if year % 4 == 0 && year % 100 != 0 || year % 400 == 0 
+	month_day[1] = 29
 end
 
-if mount == 1 
-	summa_number = number
-else
-	#mount_hash.each do |key, value| 
-	#	summa_number = value
-	until mount_hash. < mount
+number = 0 
 
+if month == 1 
+	number = day
+else
+	month_day.each_with_index do |days, index|
+		number += days if index + 1 < month
 	end
 end
 
-puts "Дней с начало года #{summa_number}"
+puts "Дней с начало года #{number}"
 
