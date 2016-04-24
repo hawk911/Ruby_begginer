@@ -1,4 +1,4 @@
-row = ('а'..'я').to_a
+row = ('а'..'я')
 vowels = ["а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"]
 hash = {}
 row.each_with_index do |v, id|

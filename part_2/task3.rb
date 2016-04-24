@@ -1,14 +1,10 @@
-ch = 0; 
-ch1 = 1;
-i = 0
 num = 100
-array = []
-until i > num
-      ch2 = ch1
-      ch1 = ch
-      ch = ch1 + ch2
-      array << ch
+array = [1,1]
+i=2
 
+until i > num
+      array[i] = array[i-1] + array[i-2]
+      array << array[i]
       i +=1
 end
 
