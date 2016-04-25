@@ -6,9 +6,13 @@ class Station
 	  @rails_array= []
 	end
 
-	def add_train()
-
+	def add(train)
+     @rails_array[]<<train
 	end 
+
+	def list
+		  @rails_array.each	{|name| puts name }
+	end
 
 end
 
@@ -26,7 +30,7 @@ class Route
 		@route_array.delete(point)
 	end
 
-	def list_route
+	def list
     @route_array.each	{|name| puts name }
   end
 
