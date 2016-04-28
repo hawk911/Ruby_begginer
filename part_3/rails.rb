@@ -7,7 +7,7 @@ class Station
 	end
 
 	def add(train)
-     @rails_array[]<<train
+     @rails_array << train
 	end 
 
 	def del(train)
@@ -18,15 +18,13 @@ class Station
 		  @rails_array.each	{|name| puts name }
 	end
 
-	def litt_type
+	def litt_type(type)
 		@rails_array.each do |train|
-			if train.type == "пассажиркий" # Как-то не очень по значению...
-			type_pass+=1
-			else
- 			type_goods +=1
+			if train.type == type 
+			    type_count +=1
 			end
 		end
-		puts "#Пассажирских поездом: {type_pass} , Грузовых поездов: #{type_goods}"
+		puts "#Поездов с типом {type}  -  #{type_count}  шт."
 	end
 
 end
