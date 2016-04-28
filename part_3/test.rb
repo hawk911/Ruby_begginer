@@ -20,7 +20,10 @@ load './rails.rb'
 поезд1.speed_up = 5
 поезд1.stop
 поезд1.count
-поезд1.count_remove = 1
-поезд1.count_remove = -1
+поезд1.count_add
+поезд1.count_del
+
 
 поезд1.route_add(Маршрут1)
+поезд1.station
+поезд1.station_next
