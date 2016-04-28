@@ -98,6 +98,18 @@ class Train
  end
 
  def station_list
-     puts "Предыдущая станция: #{@route[@point-1].name_station} , Текущая станция: #{@route[@point].name_station} , Следующая станция:#{@route[@point+1].name_station}."
+ 	 if @route.first == @route[@point]
+ 	 	 info1 =  "Предыдущей станции нет."
+ 	 else
+     info1 =  "Предыдущая станция: #{@route[@point-1].name_station}"
+   end
+
+   if @route.last == @route[@point]
+   	 info3 =  "Текущая, уже последняя станция!"
+   else
+ 		 info3 = "Следующая станция:#{@route[@point+1].name_station}."
+   end
+
+     puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
  end
 end

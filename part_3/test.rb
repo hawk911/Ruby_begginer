@@ -26,4 +26,6 @@ load './rails.rb'
 
 поезд1.route_add(Маршрут1)
 поезд1.station
+поезд1.station_list
 поезд1.station_next
+поезд1.station_list
