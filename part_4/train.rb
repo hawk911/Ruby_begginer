@@ -1,29 +1,40 @@
 class Train
 
-	attr_accessor :speed, :count
+	attr_reader :carriage, :count, :speed,
 
 	def initialize(number,type,count)
 		@number = number
 		@type = type
 		@count = count
 		@speed = 0
+		@carriage = []
 
 	end
 
 	def speed_up=(speed)
-	   @speed+=speed
-	end
+	  @speed+=speed
+  end
 
 	def stop
 		@speed = 0 
 	end
 
-	def count_add
-		 @count+=1 if @speed == 0 
+	def count_add(carriage)
+    if @speed == 0 
+    	@count+=1 
+    	@carriage << carriage
+		else
+			puts "Поезд надо остановить, чтобы добавить вагон"
+		end
 	end
 
-	def count_del
-		 @count-=1 if @speed == 0 
+	def count_del(carriage)
+		if @speed == 0 
+    	@count-=1 
+    	@carriage.delete(@carriage.last)
+    else
+		  puts "Поезд надо остановить, чтобы отцепить вагон"
+		end
 	end
 
  def route_add(route)
@@ -31,10 +42,6 @@ class Train
  	  @point = 0 
  end
 
- def station
-  puts @route[@point].name_station 
- end
- 	
  def station_next
     if @route[@point+1] != nil
     	@point+=1
@@ -60,4 +67,11 @@ class Train
 
      puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
  end
+ 
+ protected 
+
+  def station # для тестов
+    puts @route[@point].name_station 
+  end
+
 end
