@@ -30,6 +30,7 @@ class Station
 end
 
 class Route
+  attr_reader :route_array
 
 	def initialize(begin_stop, end_stop)
 		@route_array = [begin_stop,end_stop] 
@@ -58,8 +59,7 @@ class Train
 		@type = type
 		@count = count
 		@speed = 0
-		@route 
-		@point
+
 	end
 
 	def speed_up=(speed)
@@ -70,12 +70,12 @@ class Train
 		@speed = 0 
 	end
 
-	def count_remove=(count)
-		if count>0 
+	def count_add
 		 @count+=1 if @speed == 0 
-		else
-	   @count-=1 if @speed == 0 
-		end
+	end
+
+	def count_del
+		 @count-=1 if @speed == 0 
 	end
 
  def route_add(route)
@@ -84,20 +84,32 @@ class Train
  end
 
  def station
-  puts @route[@point] 
+  puts @route[@point].name_station 
  end
  	
  def station_next
     if @route[@point+1] != nil
     	@point+=1
     	@route[@point] 
-    	puts @route[@point]
+    	puts @route[@point].name_station
  	 else
  	 	  puts "Дальше поезд не идёт!"
  	 end
  end
 
  def station_list
-     puts "Предыдущая станция: #{@route[@point-1]} , Текущая станция: #{@route[@point]} , Следующая станция:#{@route[@point+1]}."
+ 	 if @route.first == @route[@point]
+ 	 	 info1 =  "Предыдущей станции нет."
+ 	 else
+     info1 =  "Предыдущая станция: #{@route[@point-1].name_station}"
+   end
+
+   if @route.last == @route[@point]
+   	 info3 =  "Текущая, уже последняя станция!"
+   else
+ 		 info3 = "Следующая станция:#{@route[@point+1].name_station}."
+   end
+
+     puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
  end
 end
