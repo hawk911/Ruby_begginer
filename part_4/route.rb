@@ -1,4 +1,5 @@
 class Route
+  attr_reader :route_array
 
 	def initialize(begin_stop, end_stop)
 		@route_array = [begin_stop,end_stop] 
