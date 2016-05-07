@@ -1,17 +1,7 @@
 class PassangerTrain < Train
 
-	def speed_up=(speed)
-		if @speed > max_speed
-			@speed+=speed
-		else
-			puts "Максимальная скорость #{max_speed}!"	
-		end
-	  
-  end
-
-  protected
-
-  def max_speed
-  	120 
-  end
+  private
+ 
+		MAX_SPEED = 120
+  
 end

@@ -1,9 +1,14 @@
-require_relatuve 'route'
-require_relatuve 'station'
-require_relatuve 'train'
-require_relatuve 'passangerTrain'
-require_relatuve 'cargoTrain'
-require_relatuve 'carriage'
-require_relatuve 'cargoCar'
-require_relatuve 'passangerCar'
+require_relative 'route'
+require_relative 'station'
+require_relative 'train'
+require_relative 'passangerTrain'
+require_relative 'cargoTrain'
+require_relative 'carriage'
+require_relative 'cargoCar'
+require_relative 'passangerCar'
 
+
+pas = PassangerTrain.new(4,"sdf")
+puts pas.speed
+pas.speed_up = 7
+puts pas.speed

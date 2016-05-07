@@ -1,19 +1,21 @@
 class Train
 
-	attr_reader :carriage, :count, :speed,
+	attr_reader :carriage, :speed
 
-	def initialize(number,type,count)
+	def initialize(number,type)
 		@number = number
 		@type = type
-		@count = count
 		@speed = 0
 		@carriage = []
-
 	end
-
+  
 	def speed_up=(speed)
-	  @speed+=speed
-  end
+		if @speed < MAX_SPEED
+			@speed+=speed
+		else
+			puts "Максимальная скорость #{MAX_SPEED}!"	
+		end
+	end
 
 	def stop
 		@speed = 0 
@@ -21,8 +23,7 @@ class Train
 
 	def count_add(carriage)
     if @speed == 0 
-    	@count+=1 
-    	@carriage << carriage
+    	 	@carriage << carriage
 		else
 			puts "Поезд надо остановить, чтобы добавить вагон"
 		end
@@ -30,8 +31,7 @@ class Train
 
 	def count_del(carriage)
 		if @speed == 0 
-    	@count-=1 
-    	@carriage.delete(@carriage.last)
+    	 	@carriage.delete(@carriage.last)
     else
 		  puts "Поезд надо остановить, чтобы отцепить вагон"
 		end
@@ -73,5 +73,6 @@ class Train
   def station # для тестов
     puts @route[@point].name_station 
   end
-
+  
+  MAX_SPEED = 50
 end
