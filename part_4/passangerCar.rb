@@ -1,4 +1,4 @@
 class PassangerCar < Carriage
-
+	
 
 end

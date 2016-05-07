@@ -21,15 +21,23 @@ class Train
 		@speed = 0 
 	end
 
-	def count_add(carriage)
+	def carriage_cost
+		puts @carriage.size 	
+	end
+
+	def carriage_add=(carriage)
     if @speed == 0 
-    	 	@carriage << carriage
-		else
+    	 	if type_carriage(carriage)
+    	 		@carriage << carriage 
+    	 	else
+    	 		puts "Не тот тип вагона!"
+    	 	end
+ 		else
 			puts "Поезд надо остановить, чтобы добавить вагон"
 		end
 	end
 
-	def count_del(carriage)
+	def carriage_del=(carriage)
 		if @speed == 0 
     	 	@carriage.delete(@carriage.last)
     else

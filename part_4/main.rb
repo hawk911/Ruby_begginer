@@ -7,8 +7,22 @@ require_relative 'carriage'
 require_relative 'cargoCar'
 require_relative 'passangerCar'
 
+passangerCar = PassangerCar.new()
+CargoCar = CargoCar.new()
 
-pas = PassangerTrain.new(4,"sdf")
+
+pas = PassangerTrain.new(4,passangerCar)
 puts pas.speed
 pas.speed_up = 7
 puts pas.speed
+pas.speed_up = -7
+puts pas.speed
+
+pas.carriage_add = passangerCar
+pas.carriage_cost
+
+pas.carriage_add = CargoCar
+pas.carriage_cost
+
+pas.carriage_del = passangerCar
+pas.carriage_cost
