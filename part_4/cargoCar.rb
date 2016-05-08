@@ -1,8 +1,8 @@
 class CargoCar < Carriage
 
-	protected
-  
+  protected
+
   def weight_carriage
-  	40000
+    40000
   end
 end

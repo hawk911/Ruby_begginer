@@ -1,12 +1,8 @@
 class CargoTrain < Train
-	
-	def type_carriage(carriage)
-		if carriage.class == CargoCar
-			return true
-		else
-			return false
-		end
-	end
+
+  def type_carriage(carriage)
+    carriage.class == @type.class
+  end
 
   private
 

@@ -1,15 +1,11 @@
 class PassangerTrain < Train
 
-	def type_carriage(carriage)
-		if carriage.class == PassangerCar
-			return true
-		else
-			return false
-		end
-	end
-	
+  def type_carriage(carriage)
+    carriage.class == @type.class
+  end
+
   private
- 
-		MAX_SPEED = 120
-  
+
+    MAX_SPEED = 120
+
 end
