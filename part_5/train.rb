@@ -1,24 +1,20 @@
-module FindTrain
-
-  def find(numder)
-
-  end
-
-end
-
-
 class Train
 
   include Manufacturer
-  extend FindTrain
 
   attr_reader :carriage, :speed
-
+  @@all = {}
   def initialize(number,type)
     @number = number
     @type = type
     @speed = 0
     @carriage = []
+    @@all[number] = self
+  end
+
+  def find(number)
+      puts @@all
+      puts @@all[number]
   end
 
   def speed_up=(speed)

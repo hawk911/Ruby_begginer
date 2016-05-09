@@ -14,12 +14,15 @@ CargoCar1 = CargoCar.new()
 
 
 pas = PassangerTrain.new(4,passangerCar)
-pas.make_print
-pas.make_manufacturer ="Russia"
-pas.make_print
+pas2 = PassangerTrain.new(5,passangerCar)
+puts pas.make
+pas.make ="Russia"
+puts pas.make
 
 st1 = Station.new("первая")
 st2 = Station.new("вторая")
 st2.all
 st3 = Station.new("третья")
 st3.all
+
+pas.find(5)
