@@ -13,8 +13,7 @@ class Train
   end
 
   def find(number)
-      puts @@all
-      puts @@all[number]
+      @@all[number]
   end
 
   def speed_up=(speed)

@@ -1,11 +1,11 @@
 class Station
 	attr_accessor :name_station
-	@@station_count = []
+	@@station = []
 
 	def initialize(name_station)
 		@name_station = name_station
 	  @rails_array= []
-	  @@station_count << self
+	  @@station << self
 	end
 
 	def add(train)
@@ -30,7 +30,7 @@ class Station
 	end
 
 	def all
-		puts @@station_count
+		@@station
 	end
 
 end
