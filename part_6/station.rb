@@ -4,6 +4,7 @@ class Station
 
 	def initialize(name_station)
 		@name_station = name_station
+		validate!
 	  @rails_array= []
 	  @@station << self
 	end
@@ -15,6 +16,12 @@ class Station
 	def del(train)
 		  @rails_array.delete(train)
 	end
+
+  def valid?
+  	validate!
+  rescue
+    false
+  end
 
 	def list
 		  @rails_array.each	{|name| puts name }
@@ -33,5 +40,11 @@ class Station
 		@@station
 	end
 
+	protected
+
+  def validate!
+    raise "Нет наименования у станции" if name_station.length == 0
+    true
+  end
 end
 

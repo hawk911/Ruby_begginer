@@ -10,9 +10,9 @@ class Train
     @name = name
     @type = type
     @speed = 0
+    validate!
     @carriage = []
     @@all[number] = self
-    validate!
   end
 
   def find(number)
