@@ -1,10 +1,11 @@
 class PassangerCar < Carriage
 
-  attr_reader :seats, :taken_seats
+  attr_reader :seats, :taken_seats, :type
 
   def initialize(seats)
     @seats = seats
     @taken_seats = 0
+    @type = "PassangerTrain"
     validate!
   end
 

@@ -9,6 +9,11 @@ class Station
 	  @@station << self
 	end
 
+  def block_train
+    return "No block" unless block_given?
+    @rails_array.each { |t| yield t}
+  end
+
 	def add(train)
      @rails_array << train
 	end
@@ -36,7 +41,7 @@ class Station
 		puts "#Поездов с типом {type}  -  #{type_count}  шт."
 	end
 
-	def all
+	def self.all
 		@@station
 	end
 

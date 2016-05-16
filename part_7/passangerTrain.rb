@@ -1,8 +1,8 @@
 class PassangerTrain < Train
 
-  def type_carriage(carriage)
-    carriage.class == @type.class
-  end
+  #def type_carriage(carriage)
+  #  carriage.class == @type.class
+  #end
 
   private
 

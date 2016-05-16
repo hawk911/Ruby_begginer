@@ -2,7 +2,7 @@ class Train
 
   include Manufacturer
 
-  attr_reader :carriage, :speed, :name, :number
+  attr_reader :carriage, :speed, :name, :number, :type
   NUMBER_GER = /^[0-9а-яa-z]{3}-*[0-9а-яa-z]{2}$/i
   @@all = {}
   def initialize(number, name, type)
@@ -13,6 +13,11 @@ class Train
     validate!
     @carriage = []
     @@all[number] = self
+  end
+
+  def block_car
+    return "No block" unless block_given?
+    @carriage.each { |car| yield car }
   end
 
   def find(number)
@@ -32,16 +37,16 @@ class Train
   end
 
   def carriage_cost
-    puts @carriage.size
+    @carriage.size
   end
 
   def carriage_add=(carriage)
     if @speed == 0
-        if type_carriage(carriage)
+        #if type_carriage(carriage)
           @carriage << carriage
-        else
-          puts "Не тот тип вагона!"
-        end
+       # else
+       #  puts "Не тот тип вагона!"
+       # end
     else
       puts "Поезд надо остановить, чтобы добавить вагон"
     end

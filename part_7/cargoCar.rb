@@ -1,10 +1,11 @@
 class CargoCar < Carriage
 
-  attr_reader :volumes, :taken_volumes
+  attr_reader :volumes, :taken_volumes, :type
 
   def initialize(volumes)
     @volumes = volumes
     @taken_volumes = 0
+    @type = "CargoTrain"
     validate!
   end
 
