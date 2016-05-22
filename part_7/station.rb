@@ -10,7 +10,7 @@ class Station
 	end
 
   def block_train
-    return "No block" unless block_given?
+    "No block" unless block_given?
     @rails_array.each { |t| yield t}
   end
 

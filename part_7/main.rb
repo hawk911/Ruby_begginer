@@ -18,16 +18,15 @@ train50 = CargoTrain.new("500-50","Cargo50","CargoTrain")
 train59 = CargoTrain.new("590-59","Cargo59","CargoTrain")
 
 passangerCar1 = PassangerCar.new(100)
-puts passangerCar1.free_seats
 passangerCar2 = PassangerCar.new(120)
+passangerCar2.add_passanger
 
 
 cargoCar1 = CargoCar.new(550)
-puts cargoCar1.add_volume
-puts cargoCar1.add_volume
+cargoCar1.add_volume = 55
 
 cargoCar2 = CargoCar.new(850)
-puts cargoCar2.free_volumes
+
 
 train1.carriage_add = passangerCar1
 train15.carriage_add = passangerCar2
@@ -48,10 +47,11 @@ s.block_train do |t|
     puts "В поезде #{t.number}:"
     t.block_car do |c|
       if c.type == "PassangerTrain"
-        puts "Вагон #{r.rand(1...100)}, тип: #{c.type}, свободные места: #{c.free_seats}, занятые места: #{c.taken_seats}"
+        puts "Вагон #{r.rand(1...100)}, тип: #{c.type}, свободные места: #{c.free}, занятые места: #{c.takes_items}"
       elsif c.type == "CargoTrain"
-        puts "Вагон #{r.rand(1...110)}, тип: #{c.type}, свободый объем: #{c.free_volumes}, занятый объем: #{c.taken_volumes}"
+        puts "Вагон #{r.rand(1...110)}, тип: #{c.type}, свободый объем: #{c.free}, занятый объем: #{c.takes_items}"
       end
     end
   end
 end
+

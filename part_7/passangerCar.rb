@@ -1,27 +1,22 @@
 class PassangerCar < Carriage
 
-  attr_reader :seats, :taken_seats, :type
+  attr_reader :type
 
   def initialize(seats)
-    @seats = seats
-    @taken_seats = 0
+    @items = seats
+    @takes_items = 0
     @type = "PassangerTrain"
     validate!
   end
 
-  def free_seats
-    @seats - @taken_seats
-  end
-
   def add_passanger
-    @taken_seats+=1 if free_seats>0
+    @takes_items+=1 if free>0
   end
 
   protected
-  attr_writer :seats,:taken_seats
 
   def validate!
-    raise "Количество мест -  должено быть цифрой!" unless seats.is_a? Fixnum
+    raise "Количество мест -  должено быть цифрой!" unless items.is_a? Fixnum
   end
 
 end
