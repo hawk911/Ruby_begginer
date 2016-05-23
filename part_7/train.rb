@@ -16,8 +16,7 @@ class Train
   end
 
   def block_car
-    "No block" unless block_given?
-    @carriage.each { |car| yield car }
+      @carriage.each { |car| yield car }
   end
 
   def find(number)
