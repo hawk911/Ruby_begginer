@@ -1,7 +1,5 @@
+#create CargoTrain
 class CargoTrain < Train
-  # def type_carriage(carriage)
-  #  carriage.class == @type.class
-  # end
 
   private
 
