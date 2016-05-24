@@ -1,3 +1,4 @@
+# create CargoCar
 class CargoCar < Carriage
   attr_reader :type
 
