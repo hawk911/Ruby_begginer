@@ -1,3 +1,4 @@
+# create Carriage
 class Carriage
   include Manufacturer
 

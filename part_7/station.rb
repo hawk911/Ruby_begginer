@@ -1,3 +1,4 @@
+# create Station
 class Station
   attr_accessor :name_station
   @@station = []
@@ -35,7 +36,7 @@ class Station
     @rails_array.each do |train|
       type_count += 1 if train.type == type
     end
-    puts "#Поездов с типом {type}  -  #{type_count}  шт."
+    puts "#Train with type  {type}  -  #{type_count}  шт."
   end
 
   def self.all
@@ -45,7 +46,7 @@ class Station
   protected
 
   def validate!
-    raise "Нет наименования у станции" if name_station.empty?
+    raise 'The station has no name' if name_station.empty?
     true
   end
 end

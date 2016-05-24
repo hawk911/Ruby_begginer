@@ -1,3 +1,4 @@
+# create PassangerCar
 class PassangerCar < Carriage
   attr_reader :type
 
@@ -15,6 +16,6 @@ class PassangerCar < Carriage
   protected
 
   def validate!
-    raise "Количество мест -  должено быть цифрой!" unless items.is_a? Fixnum
+    raise 'Seating capacity -  must Fixnum!' unless items.is_a? Fixnum
   end
 end

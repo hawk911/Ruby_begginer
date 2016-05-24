@@ -40,13 +40,13 @@ r = Random.new
 Station.all.each do |s|
   puts "На станции #{s.name_station}:"
   s.block_train do |t|
-    puts "Поезд №#{t.number}, тип: #{t.type}, число вагонов:#{t.carriage_cost}"
-    puts "В поезде #{t.number}:"
+    puts "Train №#{t.number}, type: #{t.type}, count car:#{t.carriage_cost}"
+    puts "In train #{t.number}:"
     t.block_car do |c|
       if c.type == 'PassangerTrain'
-        puts "Вагон #{r.rand(1...100)}, тип: #{c.type}, свободные места: #{c.free}, занятые места: #{c.takes_items}"
+        puts "Car #{r.rand(1...100)}, type: #{c.type}, free places: #{c.free}, taken places: #{c.takes_items}"
       elsif c.type == 'CargoTrain'
-        puts "Вагон #{r.rand(1...110)}, тип: #{c.type}, свободый объем: #{c.free}, занятый объем: #{c.takes_items}"
+        puts "Car #{r.rand(1...110)}, type: #{c.type}, free volume: #{c.free}, taken volume: #{c.takes_items}"
       end
     end
   end

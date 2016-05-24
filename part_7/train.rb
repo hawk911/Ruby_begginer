@@ -1,3 +1,4 @@
+# create Train
 class Train
   include Manufacturer
 
@@ -26,7 +27,7 @@ class Train
     if @speed < MAX_SPEED
       @speed += speed
     else
-      puts "Максимальная скорость #{MAX_SPEED}!"
+      puts "Max speed  #{MAX_SPEED}!"
     end
   end
 
@@ -40,13 +41,9 @@ class Train
 
   def carriage_add=(carriage)
     if @speed == 0
-      # if type_carriage(carriage)
       @carriage << carriage
-    # else
-    #  puts "Не тот тип вагона!"
-    # end
     else
-      puts "Поезд надо остановить, чтобы добавить вагон"
+      puts 'The train should be stopped to add a coach'
     end
   end
 
@@ -54,7 +51,7 @@ class Train
     if @speed == 0
       @carriage.delete(@carriage.last)
     else
-      puts "Поезд надо остановить, чтобы отцепить вагон"
+      puts 'The train should be stopped to unhitch a coach'
     end
   end
 
@@ -69,24 +66,24 @@ class Train
       @route[@point]
       puts @route[@point].name_station
     else
-      puts "Дальше поезд не идёт!"
+      puts "Further the train doesn't go!"
    end
   end
 
   def station_list
     info1 = if @route.first == @route[@point]
-              "Предыдущей станции нет."
+              'There is no previous station.'
             else
-              "Предыдущая станция: #{@route[@point - 1].name_station}"
+              "Previous station: #{@route[@point - 1].name_station}"
             end
 
     info3 = if @route.last == @route[@point]
-              "Текущая, уже последняя станция!"
+              'Current, already last station!'
             else
-              "Следующая станция:#{@route[@point + 1].name_station}."
+              "Next station:#{@route[@point + 1].name_station}."
             end
 
-    puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
+    puts info1 + " ,Current station: #{@route[@point].name_station} ," + info3
   end
 
   def valid?
@@ -98,13 +95,13 @@ class Train
   protected
 
   def validate!
-    raise "Номер не может быть пустым!" if number.nil?
-    raise "Нет наименования у поезда" if name.empty?
-    raise "Не правильный формат номера поезда" if number !~ NUMBER_GER
+    raise "Number can't be empty!" if number.nil?
+    raise 'The train has no name' if name.empty?
+    raise 'Not the correct format of number of the train' if number !~ NUMBER_GER
     true
   end
 
-  def station # для тестов
+  def station
     puts @route[@point].name_station
   end
 
