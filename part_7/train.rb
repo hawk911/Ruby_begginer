@@ -1,5 +1,4 @@
 class Train
-
   include Manufacturer
 
   attr_reader :carriage, :speed, :name, :number, :type
@@ -16,16 +15,16 @@ class Train
   end
 
   def block_car
-      @carriage.each { |car| yield car }
+    @carriage.each { |car| yield car }
   end
 
   def find(number)
-      @@all[number]
+    @@all[number]
   end
 
   def speed_up=(speed)
     if @speed < MAX_SPEED
-      @speed+=speed
+      @speed += speed
     else
       puts "Максимальная скорость #{MAX_SPEED}!"
     end
@@ -41,53 +40,53 @@ class Train
 
   def carriage_add=(carriage)
     if @speed == 0
-        #if type_carriage(carriage)
-          @carriage << carriage
-       # else
-       #  puts "Не тот тип вагона!"
-       # end
+      # if type_carriage(carriage)
+      @carriage << carriage
+    # else
+    #  puts "Не тот тип вагона!"
+    # end
     else
       puts "Поезд надо остановить, чтобы добавить вагон"
     end
   end
 
-  def carriage_del=(carriage)
+  def carriage_del=(_carriage)
     if @speed == 0
-        @carriage.delete(@carriage.last)
+      @carriage.delete(@carriage.last)
     else
       puts "Поезд надо остановить, чтобы отцепить вагон"
     end
   end
 
- def route_add(route)
-    @route  = route.route_array
+  def route_add(route)
+    @route = route.route_array
     @point = 0
- end
+  end
 
- def station_next
-    if @route[@point+1] != nil
-      @point+=1
+  def station_next
+    if !@route[@point + 1].nil?
+      @point += 1
       @route[@point]
       puts @route[@point].name_station
-   else
+    else
       puts "Дальше поезд не идёт!"
    end
- end
+  end
 
   def station_list
-   if @route.first == @route[@point]
-     info1 =  "Предыдущей станции нет."
-   else
-     info1 =  "Предыдущая станция: #{@route[@point-1].name_station}"
-   end
+    info1 = if @route.first == @route[@point]
+              "Предыдущей станции нет."
+            else
+              "Предыдущая станция: #{@route[@point - 1].name_station}"
+            end
 
-   if @route.last == @route[@point]
-     info3 =  "Текущая, уже последняя станция!"
-   else
-     info3 = "Следующая станция:#{@route[@point+1].name_station}."
-   end
+    info3 = if @route.last == @route[@point]
+              "Текущая, уже последняя станция!"
+            else
+              "Следующая станция:#{@route[@point + 1].name_station}."
+            end
 
-     puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
+    puts info1 + " ,Текущая станция: #{@route[@point].name_station} ," + info3
   end
 
   def valid?
@@ -96,15 +95,14 @@ class Train
     false
   end
 
- protected
+  protected
 
   def validate!
     raise "Номер не может быть пустым!" if number.nil?
-    raise "Нет наименования у поезда" if name.length == 0
-    raise "Не правильный формат номера поезда" if number !~NUMBER_GER
+    raise "Нет наименования у поезда" if name.empty?
+    raise "Не правильный формат номера поезда" if number !~ NUMBER_GER
     true
   end
-
 
   def station # для тестов
     puts @route[@point].name_station

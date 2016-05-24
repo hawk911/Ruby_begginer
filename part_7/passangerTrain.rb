@@ -1,11 +1,9 @@
 class PassangerTrain < Train
-
-  #def type_carriage(carriage)
+  # def type_carriage(carriage)
   #  carriage.class == @type.class
-  #end
+  # end
 
   private
 
     MAX_SPEED = 120
-
 end
