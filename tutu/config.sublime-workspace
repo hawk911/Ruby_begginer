@@ -1,0 +1,294 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"def",
+				"define_method"
+			],
+			[
+				"eac",
+				"each"
+			],
+			[
+				"co",
+				"count"
+			],
+			[
+				"na",
+				"name"
+			],
+			[
+				"st",
+				"stations"
+			],
+			[
+				"п",
+				"поезда"
+			],
+			[
+				"Ca",
+				"cargoTrain"
+			],
+			[
+				"Pas",
+				"passangerTrain"
+			],
+			[
+				"ty",
+				"type_goods"
+			],
+			[
+				"tra",
+				"train"
+			],
+			[
+				"g",
+				"general"
+			],
+			[
+				"if",
+				"ife	if … else … end"
+			],
+			[
+				"mo",
+				"mount"
+			],
+			[
+				"ea",
+				"eak	each_key { |key| .. }"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 33.0,
+		"last_filter": "ru",
+		"selected_items":
+		[
+			[
+				"ru",
+				"Set Syntax: Ruby"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/tutu/config.sublime-project",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_9/train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_9/validation.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_9/acessors.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_9/Acessors.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/main.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/cargoCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/manufacturer.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/cargoTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/station.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/route.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/passangerCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/passangerTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/hooks/rubocop_pre_commit_hook",
+		"/home/den/.config/sublime-text-3/Packages/User/Ruby.sublime-settings",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/hooks/applypatch-msg.sample",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/InstanceCounter.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/carriage.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/rubocop_pre_commit_hook",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/hooks/rubocop_pre_commit_hook.sample",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/hooks/update.sample",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/.git/hooks/rubocop_pre_commit_hook.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_7/main1.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_6/train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_6/main.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_6/station.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_6/route.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_6/main1.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/main.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/station.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task6.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_1/right_triangle.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task2.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task3.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task4.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task5.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/manufacturer.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/InstanceCounter",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_5/carriage.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/main.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/passangerTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/cargoTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/passangerCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/cargoCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/carriage.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/route.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/station.rb",
+		"/home/den/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/den/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/Train.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/PassangerTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/Carriage.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/CargoTrain.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/CargoCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/PassangerCar.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_4/Station.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_3/rails.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_3/test.rb",
+		"/home/den/work/src/github.com/den/hello/hello.go",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task1.rb",
+		"/home/den/Study Ruby/Reposit/Ruby_begginer/part_2/task1",
+		"/home/den/hello.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"strong_attr_accessor",
+			"accessor",
+			"strong_attr_accessor",
+			"NUMBER_GER",
+			"max_s"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Ruby/Ruby.sublime-build",
+	"project": "config.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
