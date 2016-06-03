@@ -19,6 +19,7 @@ module Acessors
     define_method(name) {instance_variable_get(var_name)}
     define_method("#{name}=".to_sym) do |value|
       raise ArgumentError, "Error! #{value} -  type #{value.class} != #{class_name}"  if class_name != value.class
+      instance_variable_set(var_name, value)
     end
   end
 
