@@ -18,7 +18,6 @@ module Validation
       item.instance_variable_get(:@validation_params).each do |key, value|
         var = instance_variable_get("@#{key}".to_sym)
         send value[0].to_sym, var, value
-        puts "#{value[0].to_sym}  #{var}  #{value}"
       end
       true
     end
